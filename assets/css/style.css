@@ -1,0 +1,44 @@
+#nav {
+    padding-left: 40%;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    background-color: #45454a;
+}
+
+.searchBox {
+    width: 30%;
+    margin-left: 0 !important;
+    padding: 10px;
+    background-color: #ebebeb !important;
+}
+
+.searchBttn {
+    color: white;
+    font-size: 20px;
+    background-color: blue;
+    border-radius: 5px;
+}
+
+#cityStats {
+    height: 120%;
+}
+
+.cityStats {
+    height: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+}
+
+.forecast {
+    margin: 20px;
+}
+
+ .forecastDay {
+    margin: 2px;
+    height: 150px;
+    background-color: skyblue;
+    border: solid 1px blue;
+    border-radius: 5px;
+ }
