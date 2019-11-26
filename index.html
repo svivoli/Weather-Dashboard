@@ -9,7 +9,9 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Bitter|Fira+Sans+Condensed|Lato|Open+Sans|Signika|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Bitter|Fira+Sans+Condensed|Lato|Open+Sans|Signika|Source+Sans+Pro&display=swap"
+        rel="stylesheet">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,12 +22,14 @@
 <body>
 
     <nav class="navbar" id="nav">
-        <span class="navbar-brand mb-0 h1"><h1>Weather Dashboard</h1></span>
+        <span class="navbar-brand mb-0 h1">
+            <h1>Weather Dashboard</h1>
+        </span>
     </nav>
 
     <div class="container">
-        
-        <div class="row">
+
+        <div class="row" id="main">
 
             <div class="searchBox">
 
@@ -33,17 +37,23 @@
                     <div class="col-md-12">
 
                         <div class="searchBar">
-                            <label for="citySearch">Search For a City:</label>
+                            <label for="citySearch">
+                                <h5>Search For a City:</h5>
+                            </label>
 
                             <div class="input-group">
                                 <input type="text" class="form-control" id="cityInput">
                                 <span class="input-group-btn">
-                                    <button class="searchBttn"><i class="fas fa-search"></i></button>
+                                    <button class="searchBttn" id="citySearch"><i class="fas fa-search"></i></button>
                                 </span>
                             </div>
 
                         </div>
                     </div>
+
+                </div>
+
+                <div class="searched">
 
                 </div>
 
@@ -57,6 +67,12 @@
 
                 <div class="col-md-12" id="cityStats">
                     <div class="cityStats">
+                        <div class="weatherIcons">
+                            <i class="fas fa-cloud-sun"></i>
+                            <i class="fas fa-cloud"></i>
+                            <i class="fas fa-cloud-rain"></i>
+                            <i class="fas fa-cloud-showers-heavy"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -65,40 +81,45 @@
                 <div class="col-md-12">
 
                     <div class="forecast">
-                        <h3>6-Day Forecast:</h3>
+                        <h4>5-Day Forecast:</h4>
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="pull-left">
                                 <div class="day1 forecastDay">
+                                    <h6 id="foreTitle1"></h6>
 
                                 </div>
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="pull-left">
                                 <div class="day2 forecastDay">
+                                    <h6 id="foreTitle2"></h6>
 
                                 </div>
                             </div>
 
-                            <div class="col-md-2">
+                            <div class="pull-left">
                                 <div class="day3 forecastDay">
+                                    <h6 id="foreTitle3"></h6>
 
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="pull-left">
                                 <div class="day4 forecastDay">
+                                    <h6 id="foreTitle4"></h6>
 
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="pull-left">
                                 <div class="day5 forecastDay">
+                                    <h6 id="foreTitle5"></h6>
 
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <!-- <div class="col-md-2">
                                 <div class="day6 forecastDay">
 
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
 
 
