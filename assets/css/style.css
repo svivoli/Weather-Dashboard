@@ -6,7 +6,8 @@
 }
 
 #main {
-    margin-left: -5%;
+    margin-left: -10%;
+    margin-right: -15%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -19,7 +20,7 @@
 @media screen and (max-width: 996px) {
     #main {
         margin-left: -20%;
-        margin-right: -25%;
+        margin-right: -10%;
     }
 }
 
