@@ -67,7 +67,7 @@ $("#citySearch").on("click", function (event) {
         url: queryURL2,
         method: "GET"
     }).then(function (response2) {
-        console.log(response2);
+        console.log('res2', response2);
 
         var day1El = $(".day1");
         var day2El = $(".day2");
@@ -76,24 +76,59 @@ $("#citySearch").on("click", function (event) {
         var day5El = $(".day5");
         var dayEls = [day1El, day2El, day3El, day4El, day5El];
 
-        for (var j=0; j<dayEls.length; j++) {
-            var $dayDiv = $("<div>");
-            var $date = $("<p>");
-            $date.html(mm + '/' + (dd ++ + 1) + '/' + yyyy);
-            $date.attr("style", "text-size: 24px; font-weight: bold");
-            $dayDiv.append($date);
-            var $dayTemp = $("<p>");
-            $dayTemp.html("Temp: " + response2.list[j+8].main.temp + " &deg;F");
-            $dayDiv.append($dayTemp);
-            var $dayHum = $("<p>");
-            $dayHum.html("Humidity: " + response2.list[j+8].main.humidity + "%");
-            $dayDiv.append($dayHum);
-            var $weatherIcon = $("<img>");
-            $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response2.list[j+8].weather[0].icon + ".png");
-            $dayDiv.append($weatherIcon);
-            dayEls[j].html($dayDiv);
+        // var noonDates = [];
+        // for (var m = 0; m < response2.list.length; m++) {
+        //     if (response2.list[m].dt_txt.includes("12:00:00")) {
+        //         noonDates.push(response2.list[m])
+        //     }
+        // }
+        // console.log('day', noonDates)
 
-        }
+            for (var j = 0; j < response2.list.length; j++) {
+                if (response2.list[j].dt_txt.indexOf("15:00:00") !== -1) {
+                    var $dayDiv = $("<div>");
+                    $dayDiv.attr("style", "color: white");
+    
+                    var $date = $("<h5>");
+                    $date.html(mm + '/' + (dd++ + 1) + '/' + yyyy);
+                    $date.attr("style", "padding-top: 5px; text-size: 24px; font-weight: bold");
+    
+                    var $weatherIcon = $("<img>");
+                    $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response2.list[j].weather[0].icon + ".png");
+    
+                    var $dayTemp = $("<p>");
+                    $dayTemp.html("Temp: " + response2.list[j].main.temp + " &deg;F");
+    
+                    var $dayHum = $("<p>");
+                    $dayHum.html("Humidity: " + response2.list[j].main.humidity + "%");
+    
+                    $dayDiv.append($date);
+                    $dayDiv.append($weatherIcon);
+                    $dayDiv.append($dayTemp);
+                    $dayDiv.append($dayHum);
+                    
+                    dayEls[j].html($dayDiv);
+                }
+            }
+
+        // for (var j=0; j<dayEls.length; j++) {
+        //     var $dayDiv = $("<div>");
+        //     $dayDiv.attr("style", "color: white");
+        //     var $date = $("<h5>");
+        //     $date.html(mm + '/' + (dd ++ + 1) + '/' + yyyy);
+        //     $date.attr("style", "padding-top: 5px; text-size: 24px; font-weight: bold");
+        //     $dayDiv.append($date);
+        //     var $weatherIcon = $("<img>");
+        //     $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response2.list[j+4].weather[0].icon + ".png");
+        //     $dayDiv.append($weatherIcon);
+        //     var $dayTemp = $("<p>");
+        //     $dayTemp.html("Temp: " + response2.list[j+8].main.temp + " &deg;F");
+        //     $dayDiv.append($dayTemp);
+        //     var $dayHum = $("<p>");
+        //     $dayHum.html("Humidity: " + response2.list[j+8].main.humidity + "%");
+        //     $dayDiv.append($dayHum);
+        //     dayEls[j].html($dayDiv);
+        // }
 
     });
 
