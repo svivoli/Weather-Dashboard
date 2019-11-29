@@ -22,7 +22,7 @@ Components:
 
 ### Links to Project
 
-https://github.com/svivoli/Weather-Dashboard
+https://github.com/svivoli/Weather-Dashboard  
 https://svivoli.github.io/Weather-Dashboard/
 
 ### User Experience
