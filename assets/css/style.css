@@ -13,6 +13,7 @@ body {
 #main {
     margin-left: -5%;
     margin-right: -10%;
+    padding-bottom: 20px;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -80,29 +81,6 @@ body {
     margin-right: 0;
  }
 
- @media screen and (max-width: 375px) {
-    .navbar {
-        width: 812px;
-    }
-
-    #main {
-        margin-left: 0;
-        width: 490%;
-    }
-
-    .searchBox {
-        width: 100%;
-    }
-
-    #weather {
-        width: 70%;
-    }
-
-    #cityStats {
-        width: 130%;
-    }
-}
-
  @media screen and (max-width: 776px) {
     #nav {
         width: 1500px;
@@ -110,8 +88,9 @@ body {
     }
 
     #main {
-        margin-left: 0;
         width: 390%;
+        margin-left: 0;
+        padding-bottom: 20px;
     }
 
     .searchBox {
@@ -130,22 +109,65 @@ body {
     }
 }
 
-/* @media screen and (max-width: 996px) {
+@media screen and (max-width: 996px) {
+    body {
+        background-size: 1500px;
+    }
+
     #nav {
-        width: 2100px;
+        width: 3500px;
+        padding-left: 30%;
     }
 
     #main {
+        width: 115%;
         margin-left: -5%;
         margin-right: -10%;
+        padding-bottom: 20px;
     }
 
     .searchBox {
-        width: 20%;
+        width: 30%;
         height: 250px;
     }
 
     #weather {
-        margin-left: 20px;
+        width: 100%;
+        margin-left: 0;
     }
-} */
+
+    #forecast {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #nav {
+        width: 812px;
+        padding-left: 10px;
+    }
+
+    #main {
+        width: 100%;
+        margin-left: 0;
+        padding-bottom: 20px;
+    }
+
+    .searchBox {
+        width: 100%;
+        margin-left: -5%;
+    }
+
+    #weather {
+        margin-left: -5%;
+        width: 120%;
+    }
+
+    #cityStats {
+        width: 100%;
+    }
+
+    #forecast {
+        width: 70%;
+    }
+}
