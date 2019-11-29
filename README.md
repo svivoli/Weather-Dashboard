@@ -24,15 +24,15 @@ Components:
 
 ![Blank Page](https://i.imgur.com/KmGt2uD.jpg)
 
-The user is greeted with a somewhat barren page, their attention direction toward the search bar in the top left corner.
+The user is greeted with a somewhat barren page, their attention directed toward the search bar in the top left corner.
 
 ![Current Weather](https://i.imgur.com/lxIWrKG.png)
 
-Upon inputting a city, the current weather is displayed to the right. The current weather data that is pulled includes temperature, humidity, and wind speed. The city name, date, and current weather icon are displayed at the top.
+Upon inputting a city, a div to the right expands to display the current weather. The current weather data that is displayed includes temperature, humidity, and wind speed. The city name, date, and current weather icon are displayed as a title at the top.
 
 ![Forecast](https://i.imgur.com/t4G58Bg.png)
 
-Below the current weather, the 5-day forecast for that city is displayed. For each day, the date, weather icon, temperature, and humidity are displayed, corresponding to data at the 03:00:00 hour of that date. 
+In a div below the current weather, the 5-day forecast for that city is displayed on bootstrap cards. For each day, the date, weather icon, temperature, and humidity are displayed, corresponding to data at the 03:00:00 hour of that date. 
 
 ![Full Page](https://i.imgur.com/jtkw9sP.jpg)
 
