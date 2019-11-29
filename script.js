@@ -54,7 +54,7 @@ $("#citySearch").on("click", function (event) {
             var $historyRow = $("<div>");
             $historyRow.attr("style", "padding: 5px; border: solid 1px lightgray; border-radius: 5px; background-color: white;");
             $historyRow.html(searchedInput);
-            searchedEl.append($historyRow);
+            searchedEl.prepend($historyRow);
         }
 
     });
@@ -81,7 +81,7 @@ $("#citySearch").on("click", function (event) {
             $("#forecast .row").append(col);
           }
         }
-        
+
     });
 
 });

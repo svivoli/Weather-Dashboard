@@ -34,7 +34,7 @@ Upon inputting a city, a div to the right expands to display the current weather
 
 In a div below the current weather, the 5-day forecast for that city is displayed on bootstrap cards. For each day, the date, weather icon, temperature, and humidity are displayed, corresponding to data at the 03:00:00 hour of that date. 
 
-![Full Page](https://i.imgur.com/jtkw9sP.jpg)
+![Full Page](https://i.imgur.com/Yy8ip70.jpg)
 
 As the user performs multiple searches, their search history is displayed below the search bar. 
 
