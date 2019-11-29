@@ -81,46 +81,19 @@ body {
     margin-right: 0;
  }
 
- @media screen and (max-width: 776px) {
-    #nav {
-        width: 1500px;
-        padding-left: 10px;
-    }
-
-    #main {
-        width: 390%;
-        margin-left: 0;
-        padding-bottom: 20px;
-    }
-
-    .searchBox {
-        width: 25%;
-        height: 250px;
-        margin-left: -1%;
-    }
-
-    #weather {
-        margin-left: -2%;
-        width: 90%;
-    }
-
-    #cityStats {
-        width: 32%;
-    }
-}
-
+/* md devices - tablets */
 @media screen and (max-width: 996px) {
     body {
         background-size: 1500px;
     }
 
-    #nav {
-        width: 3500px;
+    .navbar {
+        width: 100%;
         padding-left: 30%;
     }
 
     #main {
-        width: 115%;
+        width: 200%;
         margin-left: -5%;
         margin-right: -10%;
         padding-bottom: 20px;
@@ -137,24 +110,57 @@ body {
     }
 
     #forecast {
-        width: 10%;
+        width: 100%;
     }
 }
 
-@media screen and (max-width: 390px) {
+/* sm devices - landscape phones */
+@media screen and (max-width: 776px) {
     #nav {
-        width: 812px;
-        padding-left: 10px;
+        width: 1500px;
+        padding-left: 25px;
     }
 
     #main {
+        width: 190%;
+        margin-left: 6%;
+        padding-bottom: 20px;
+    }
+
+    .searchBox {
+        width: 50%;
+        margin-left: -5%;
+    }
+
+    #weather {
+        margin-left: -5%;
         width: 100%;
+    }
+
+    #cityStats {
+        width: 100%;
+    }
+
+    #forecast {
+        width: 100%;
+    }
+}
+
+/* xs devices - phones */
+@media screen and (max-width: 375px) {
+    #nav {
+        width: 812px;
+        padding-left: 7px;
+    }
+
+    #main {
+        width: 105%;
         margin-left: 0;
         padding-bottom: 20px;
     }
 
     .searchBox {
-        width: 100%;
+        width: 105%;
         margin-left: -5%;
     }
 
@@ -168,6 +174,6 @@ body {
     }
 
     #forecast {
-        width: 70%;
+        width: 100%;
     }
 }
