@@ -91,25 +91,23 @@ body {
     }
 
     .searchBox {
-        margin-left: 3%;
         width: 100%;
     }
 
     #weather {
-        margin-left: 2%;
         width: 70%;
     }
 
     #cityStats {
-        width: 50%;
-    }
-
-    .cityStats {
-        width: 43%;
+        width: 130%;
     }
 }
 
  @media screen and (max-width: 776px) {
+    #nav {
+        width: 1500px;
+        padding-left: 10px;
+    }
 
     #main {
         margin-left: 0;
@@ -117,22 +115,24 @@ body {
     }
 
     .searchBox {
+        width: 25%;
+        height: 250px;
         margin-left: -1%;
-        width: 90%;
     }
 
     #weather {
-        margin-left: -1%;
+        margin-left: -2%;
+        width: 90%;
     }
 
-    .cityStats {
-        width: 30%;
+    #cityStats {
+        width: 32%;
     }
 }
 
-@media screen and (max-width: 996px) {
+/* @media screen and (max-width: 996px) {
     #nav {
-        width: 500%;
+        width: 2100px;
     }
 
     #main {
@@ -141,7 +141,11 @@ body {
     }
 
     .searchBox {
-        width: 100%;
+        width: 20%;
         height: 250px;
     }
-}
+
+    #weather {
+        margin-left: 20px;
+    }
+} */
