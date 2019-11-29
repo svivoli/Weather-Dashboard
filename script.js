@@ -84,32 +84,32 @@ $("#citySearch").on("click", function (event) {
         // }
         // console.log('day', noonDates)
 
-            for (var j = 0; j < response2.list.length; j++) {
-                if (response2.list[j].dt_txt.indexOf("15:00:00") !== -1) {
-                    var $dayDiv = $("<div>");
-                    $dayDiv.attr("style", "color: white");
+        //     for (var j = 0; j < response2.list.length; j++) {
+        //         if (response2.list[j].dt_txt.indexOf("15:00:00") !== -1) {
+        //             var $dayDiv = $("<div>");
+        //             $dayDiv.attr("style", "color: white");
     
-                    var $date = $("<h5>");
-                    $date.html(mm + '/' + (dd++ + 1) + '/' + yyyy);
-                    $date.attr("style", "padding-top: 5px; text-size: 24px; font-weight: bold");
+        //             var $date = $("<h5>");
+        //             $date.html(mm + '/' + (dd++ + 1) + '/' + yyyy);
+        //             $date.attr("style", "padding-top: 5px; text-size: 24px; font-weight: bold");
     
-                    var $weatherIcon = $("<img>");
-                    $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response2.list[j].weather[0].icon + ".png");
+        //             var $weatherIcon = $("<img>");
+        //             $weatherIcon.attr("src", "http://openweathermap.org/img/w/" + response2.list[j].weather[0].icon + ".png");
     
-                    var $dayTemp = $("<p>");
-                    $dayTemp.html("Temp: " + response2.list[j].main.temp + " &deg;F");
+        //             var $dayTemp = $("<p>");
+        //             $dayTemp.html("Temp: " + response2.list[j].main.temp + " &deg;F");
     
-                    var $dayHum = $("<p>");
-                    $dayHum.html("Humidity: " + response2.list[j].main.humidity + "%");
+        //             var $dayHum = $("<p>");
+        //             $dayHum.html("Humidity: " + response2.list[j].main.humidity + "%");
     
-                    $dayDiv.append($date);
-                    $dayDiv.append($weatherIcon);
-                    $dayDiv.append($dayTemp);
-                    $dayDiv.append($dayHum);
+        //             $dayDiv.append($date);
+        //             $dayDiv.append($weatherIcon);
+        //             $dayDiv.append($dayTemp);
+        //             $dayDiv.append($dayHum);
                     
-                    dayEls[j].html($dayDiv);
-                }
-            }
+        //             dayEls[j].html($dayDiv);
+        //         }
+        //     }
 
         // for (var j=0; j<dayEls.length; j++) {
         //     var $dayDiv = $("<div>");
@@ -129,6 +129,31 @@ $("#citySearch").on("click", function (event) {
         //     $dayDiv.append($dayHum);
         //     dayEls[j].html($dayDiv);
         // }
+
+        $("#forecast").html("<h4 class=\"mt-3\">5-Day Forecast:</h4>").append("<div class=\"row\">");
+        // loop over all forecasts (by 3-hour increments)
+        for (var i = 0; i < response2.list.length; i++) {
+          // only look at forecasts around 3:00pm
+          if (response2.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+            // create html elements for a bootstrap card
+            var col = $("<div>").addClass("col-md-2");
+            col.attr("style", "margin: 10px")
+            var card = $("<div>").addClass("text-white forecastDay");
+            var body = $("<div>").addClass("card-body p-2");
+            // body.attr("style", "text-align: center");
+            var title = $("<h5>").addClass("card-title").text(new Date(response2.list[i].dt_txt).toLocaleDateString());
+            var img = $("<img>").attr("src", "http://openweathermap.org/img/w/" + response2.list[i].weather[0].icon + ".png");
+            var p1 = $("<p>").addClass("card-text").text("Temp: " + response2.list[i].main.temp_max + " °F");
+            p1.attr("style", "font-size: 14px")
+            var p2 = $("<p>").addClass("card-text").text("Humidity: " + response2.list[i].main.humidity + "%");
+            p2.attr("style", "font-size: 14px")
+            // merge together and put on page
+            col.append(card.append(body.append(title, img, p1, p2)));
+            $("#forecast .row").append(col);
+          }
+        }
+
+        
 
     });
 
