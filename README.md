@@ -20,6 +20,11 @@ Components:
 10. Googlefonts
 11. Super cool background
 
+### Links to Project
+
+https://github.com/svivoli/Weather-Dashboard
+https://svivoli.github.io/Weather-Dashboard/
+
 ### User Experience
 
 ![Blank Page](https://i.imgur.com/KmGt2uD.jpg)
