@@ -1,5 +1,10 @@
 # Weather-Dashboard
 
+### Links to Project
+
+https://github.com/svivoli/Weather-Dashboard  
+https://svivoli.github.io/Weather-Dashboard/
+
 ### Description
 
 The purpose of this project was to create a weather dashboard that pulls data from OpenWeather to produce current weather stats as well as a five day forecast for a city inputted by the user. The user's search history is stored and displayed on the page so long as they stay on the page. This serves to deliver concise weather data to users.
@@ -19,11 +24,6 @@ Components:
 9. Media queries to optimize user experience on mobile devices
 10. Googlefonts
 11. Super cool background
-
-### Links to Project
-
-https://github.com/svivoli/Weather-Dashboard  
-https://svivoli.github.io/Weather-Dashboard/
 
 ### User Experience
 

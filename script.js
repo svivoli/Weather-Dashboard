@@ -22,6 +22,8 @@ $("#citySearch").on("click", function (event) {
         method: "GET"
     }).then(function (response) {
 
+        console.log(response)
+
         var $cityTitle = $("<h3>");
         $cityTitle.attr("style", "padding-bottom: 15px; font-weight: bold");
         var weatherIcon = $("<img>");
